@@ -1,8 +1,7 @@
-a3719057963cc6079f1b60a15def35c4 *DESCRIPTION
-0c73d7162c866b5ca8180712239fad6f *NAMESPACE
+aa656c97dc58d8dcfaa9829d04ee4888 *DESCRIPTION
+8a9e166865c90c29fb9f700feee5e5f8 *NAMESPACE
 c516f9ab64f7a8405843ac08a803a96c *R/multispin_prop.R
-d03edcf160b1942192eb10b0512ed0fc *R/multispin_wrapper.R
-552ba80095f00d6b5d361e386885b8b9 *R/zzz.R
+1551b1065ddff7b78f7ce7cfd0b682c4 *R/multispin_wrapper.R
 a30c745ad337d0f186da057251177e60 *inst/CITATION
 4f720a5cbb363aa15186a1ca3b4c7358 *man/component.animation.Rd
 49fb1b0ffd8ced8e11d436039ff7f7f6 *man/coupling.matrices.Rd

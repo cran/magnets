@@ -184,7 +184,8 @@ multispin.evol <- function (init=NULL,
                 as.integer (rl),
                 as.double (error),
                 as.integer (iter),
-                process=double(3*n*rl1)
+                process=double(3*n*rl1),
+                PACKAGE="magnets"
                 )$process;
     #dyn.unload (so.file);
 
