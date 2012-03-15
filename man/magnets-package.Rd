@@ -28,7 +28,7 @@ that can do this job yet. My package will fulfill this gap.
 As the first step, my package now is able to simulate the
 time-dependent dynamics of n magnet spins with any possible
 configurations. My package has the ability to display the dynamics as
-an animation with the help of rggobi package, which proves to be very
+an animation with the help of animation package, which proves to be very
 helpful in my research. Some system related
 properties such as the free energy and the average magnitude of the spins can be
 measured.
@@ -62,7 +62,7 @@ LazyLoad: \tab yes\cr
 
 Use \code{\link{multispin.evol}} to simulate, use
 \code{\link{free.energy}} to calculate the free energy of the system,
-use \code{\link{component.animation}} and \code{\link{replot.animation}}
+use \code{\link{component.animation}}
 to view the dynamics directly as an animation.
 
 }

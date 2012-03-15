@@ -155,7 +155,7 @@ int solve1 (int n, gsl_vector* m, gsl_vector* hext, gsl_vector* Nv, gsl_vector* 
     if (status == GSL_SUCCESS) {
 	gsl_vector_memcpy (m1, s->x);
     } else {
-	printf ("Cannot approach the required accuracy!\n");
+	//printf ("Cannot approach the required accuracy!\n");
     }
      
     gsl_multiroot_fsolver_free (s);

@@ -6,7 +6,7 @@
   Plot An Animation for A Specific Component of All the Micro-spins
 }
 \description{
-  This function utilizes rggobi package to plot an animation for the
+  This function utilizes animation package to plot an animation for the
   time evolution of a specific component of all the micro-spins. This is
   the most direct way to view the system and is very helpful to study
   the system.
@@ -36,9 +36,9 @@ component.animation(g = NA, by = 10, component = 2, time = NA)
 }
 }
 \details{
-  This function utilizes rggobi package to plot an animation for the
+  This function utilizes animation package to plot an animation for the
   time evolution of a specific component of all the micro-spins. If
-  the package rggobi is not loaded yet, it will load it automatically.
+  the package animation is not loaded yet, it will load it automatically.
 
   All the micro-magnets are
   plotted on a straight no matter what the system's real geometric
@@ -47,22 +47,11 @@ component.animation(g = NA, by = 10, component = 2, time = NA)
   \code{\link{multispin.evol}}). The order of the micro-magnets are
   decided by the way how the spins are numbered. 
 }
-\value{
-  A new ggobi object with two windows, one of which is the main setting
-  window and the other is the plot window. The result also has several
-  attributes to be used by \code{\link{replot.animation}}.
-}
 \references{
-  \emph{An Introduction to rggobi}, H. Wickham, M. Lawrence, D. T. Lang,
-  D. F. Swayne, \url{http://www.ggobi.org/rggobi/introduction.pdf}
-}
-\note{
-  If the data points are out of the plot range, just wait until the
-  animation stops and then choose in the main GGOBI window "Tools" ->
-  "Variable Manipulation" -> "Rescale". This will bring all the data
-  points into the plot range. After that, use
-  \code{\link{replot.animation}} to view the animation in the same
-  window with the correct scale.
+  For an introduction to the R package animation, please take a look at
+  \url{http://cran.r-project.org/web/packages/animation/index.html}
+  \url{http://animation.yihui.name}
+  \url{https://github.com/yihui/animation}
 }
 \author{
   Hai Qian, Electrical Engineering Department, UCLA
@@ -70,9 +59,6 @@ component.animation(g = NA, by = 10, component = 2, time = NA)
 \seealso{
   \code{\link{multispin.evol}} to generate simulation result (evolution
   object) and check out the examples there
-
-  \code{\link{replot.animation}} to replot the same animation in the
-  same plot windows.
 }
 
 

@@ -173,42 +173,56 @@ component.animation <- function (g=NA, by=10, component=2, time=NA)
     }
     
     tt <- search ();
-    if (length(tt["package:rggobi"==tt]) == 0) {
-      library (rggobi);
+    if (length(tt["package:animation"==tt]) == 0) {
+      library (animation);
     }
  
     df <- data.frame (x=1:length(w), g$process[w,1]);
 
-    pred <- data.frame(x=1:length(w), y=c(1.3, rep(-1.3, length(w)-1)));
-    pre <- ggobi_longitudinal (pred);
-    ani <- ggobi_longitudinal (df, g=pre);
-    df_a <- ani[1];
+    ## pred <- data.frame(x=1:length(w), y=c(1.3, rep(-1.3, length(w)-1)));
+    ## pre <- ggobi_longitudinal (pred);
+    ## ani <- ggobi_longitudinal (df, g=pre);
+    ## df_a <- ani[1];
  
-    for (i in seq (1,t,by=by)) {
-      df_a[,2] <- g$process[w,i];
-    }
+    ## for (i in seq (1,t,by=by)) {
+    ##   df_a[,2] <- g$process[w,i];
+    ## }
  
-    attr (ani, "n") <- n;
-    attr (ani, "T") <- t;
-    attr (ani, "w") <- w;
-    attr (ani, "g") <- g;
-    attr (ani, "by") <- by;
-    
-    return (ani);
-  }
+    ## attr (ani, "n") <- n;
+    ## attr (ani, "T") <- t;
+    ## attr (ani, "w") <- w;
+    ## attr (ani, "g") <- g;
+    ## attr (ani, "by") <- by;
 
-replot.animation <- function (ani)
-  {
-    T <- attr (ani, "T");
-    w <- attr (ani, "w");
-    by <- attr (ani, "by");
-    g <- attr (ani, "g");
+    saveGIF(
+         {
+             ani.options(interval = 0.1, verbose=FALSE, nmax=t, ani.width=800);
+             x <- 1:length(w);
+             for (i in seq(1,t,by=by))
+             {
+                 plot(x, g$process[w,i], type='o', ylim=c(-1,1));
+             }
+         },
+            movie.name = "Magnets Dynamics.gif",
+            interval = 0.05,
+            nmax = length(t),
+            ani.width = 800,
+            ani.height = 600
+            );
+}
+
+## replot.animation <- function (ani)
+##   {
+##     T <- attr (ani, "T");
+##     w <- attr (ani, "w");
+##     by <- attr (ani, "by");
+##     g <- attr (ani, "g");
     
-    df_a <- ani[1];
-    for (i in seq (1,T,by=by)) {
-      df_a[,2] <- g$process[w,i];
-    }
-  }
+##     df_a <- ani[1];
+##     for (i in seq (1,T,by=by)) {
+##       df_a[,2] <- g$process[w,i];
+##     }
+##   }
 
 # ----------------------------------------------------------------
 rect.demag <- function (a, b, c)

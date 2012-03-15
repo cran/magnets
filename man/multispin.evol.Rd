@@ -390,7 +390,7 @@ me <- array (c(0,1,0), dim=c(3,1)); # external magnet configuration
 v.ext <- c(2200);
 
 ts <- gamma * Ms; # time scale
-T <- 40000; # 1 ps is equal to 10^(-12)*ts
+T <- 3000; # 1 ps is equal to 10^(-12)*ts
 dt <- 0.01;
 
 h.ext <- rep (0, 3*n); # external field
@@ -412,7 +412,6 @@ plot (g, spins=c(1,2,5,10)) # plot magnitudes
 plot (g, spins=c(1,2,5,10), components=c(2,2,2,3)); # plot time-dependence of several spins
 
 ani <- component.animation (g, by=10, time=T, component=2); # plot animations
-replot.animation (ani);
 
 # ------------------------------------------
 #
@@ -458,12 +457,12 @@ me <- cbind (c(0,1,0), c(0,1,0), c(0,-1,0));
 v.ext <- rep (3000, 3);
 
 ts <- gamma * Ms;
-T <- 35183; # 1 ps is equal to 10^(-12)*ts
+T <- 3000; # 1 ps is equal to 10^(-12)*ts
 dt <- 0.01;
 
 # time-dependent external field
-tmp <- seq (0.15, 0, length.out=30000);
-x.i <- c(tmp, rep(0,T-30000));
+tmp <- seq (0.15, 0, length.out=3000);
+x.i <- c(tmp, rep(0,T-1000));
 h.ext <- c();
 for (i in 1:T) {
   h.ext <- c(h.ext, rep(c(x.i[i],0,0), n));
@@ -483,7 +482,6 @@ plot (fg);
 mg <- magnitude (g);
 
 ani <- component.animation (g, by=10, time=T, component=2);
-replot.animation (ani);
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

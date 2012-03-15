@@ -1,11 +1,11 @@
 Package: magnets
 Type: Package
 Title: Simulate micro-magnets dynamics
-Version: 0.1
-Date: 2009-10-15
+Version: 0.2
+Date: 2012-03-15
 Author: Hai Qian
 Maintainer: Hai Qian <haiqian@ee.ucla.edu>
-Depends: R (>= 2.8.0), rggobi
+Depends: R (>= 2.8.0), animation
 SystemRequirements: GNU GSL
 Description: Given positions and other properties of a series of
         micro-magnet spins, we can simulate the evolution of the system
@@ -13,6 +13,6 @@ Description: Given positions and other properties of a series of
         magnets.
 License: GPL (>= 2)
 LazyLoad: yes
-Packaged: 2010-05-11 05:27:51 UTC; haiqian
+Packaged: 2012-03-22 19:02:44 UTC; haiqian
 Repository: CRAN
-Date/Publication: 2010-05-11 05:36:13
+Date/Publication: 2012-03-22 21:02:02
